@@ -1,0 +1,77 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #fff0f6; /* light blush pink */
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #3b0024; /* dark rose text */
+}
+
+.main_body {
+  background-color: #ff82b2; /* warm pink container */
+  padding: 1rem;
+  border-radius: 16px;
+  max-width: 480px;
+  margin: auto;
+  color: #fff;
+  box-shadow: 0 0 15px #ff82b250;
+}
+
+.main_body button {
+  background-color: #ff82b2;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.main_body button:hover {
+  text-shadow: 0 0 20px #fa3a819d;
+}
+
+.main_body input {
+  border-radius: 8px;
+  border: none;
+  padding: 0.4rem;
+}
+
+.main_body_login,
+.main_body_signup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+
+.login,
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login button,
+.signup button {
+  background-color: #ff4d8d;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.login button:hover,
+.signup button:hover {
+  background-color: #ff76a9;
+  box-shadow: 0 0 10px #ff4d8d80;
+}
