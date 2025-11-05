@@ -6,18 +6,18 @@
 }
 
 body {
-  background-color: #fff0f6; /* light blush pink */
+  background-color: #fff0f6;
   font-family: 'Inter', system-ui, sans-serif;
   margin: 0;
   padding: 0;
-  color: #3b0024; /* dark rose text */
+  color: #3b0024;
 }
 
 .main_body {
-  background-color: #ff82b2; /* warm pink container */
+  background-color: #ff82b2;
   padding: 1rem;
   border-radius: 16px;
-  max-width: 480px;
+  max-width: 800px;
   margin: auto;
   color: #fff;
   box-shadow: 0 0 15px #ff82b250;
@@ -30,6 +30,9 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 500;
+  margin-top: 1rem;
+  font-size: 80%;
+  text-decoration: underline;
 }
 
 .main_body button:hover {
@@ -43,12 +46,13 @@ body {
 }
 
 .main_body_login,
-.main_body_signup {
+.main_body_signup,
+.main_body_joinGame {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 75%;
-  text-align: center;
+  width: 90%;
+  align-items: center;
   margin: auto;
 }
 
@@ -57,10 +61,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 75%;
 }
 
 .login button,
-.signup button {
+.signup button,
+.joinGame button,
+.gameContainerWrapper button {
   background-color: #ff4d8d;
   color: #fff;
   border-radius: 8px;
@@ -68,10 +75,96 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   font-weight: 500;
+  margin-top: auto;
+  text-decoration: none;
+  font-size: 90%;
 }
 
 .login button:hover,
-.signup button:hover {
-  background-color: #ff76a9;
+.signup button:hover,
+.joinGame button:hover,
+.gameContainerWrapper button:hover {
+  background-color: #d43d74;
   box-shadow: 0 0 10px #ff4d8d80;
+}
+
+.joinGame {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 75%;
+}
+
+.waiting {
+  margin: auto;
+  padding: 0.2rem;
+  font-weight: bold;
+  font-size: 100%;
+  position: relative;
+  display: inline-block;
+  white-space: pre;
+  background-color: #ff82b2;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #fff;
+}
+
+.waiting::after {
+  content: '   ';
+  position: absolute;
+  display: inline-block;
+  width: 1ch;
+  animation: dots 2.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+.board {
+  width: 360px;
+  height: 360px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #3b0024;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  min-height: 80px;
+  min-width: 360px;
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid #3b0024;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 50px;
+  color: #ff4d8d;
+}
+
+.square:active {
+  background-color: #fff0f6;
+}
+
+.gameContainerWrapper {
+  background-color: #ff82b2;
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.winnerMessage {
+  font-size: 15px;
+  font-weight: bold;
 }

@@ -12,12 +12,13 @@ function Login({setIsAuth}) {
     const login = () => {
         Axios.post("http://localhost:3001/login", {username, password}).then(res => {
             const {firstName, lastName, email, username, token, userId} = res.data;
-            cookies.set("token", token);
-            cookies.set("userId", userId);
-            cookies.set("firstName", firstName);
-            cookies.set("lastName", lastName);
-            cookies.set("email", email);
-            cookies.set("username", username);
+            const options = {path: '/'};
+            cookies.set("token", token, options);
+            cookies.set("userId", userId, options);
+            cookies.set("firstName", firstName, options);
+            cookies.set("lastName", lastName, options);
+            cookies.set("email", email, options);
+            cookies.set("username", username, options);
             setIsAuth(true);
         });
     };

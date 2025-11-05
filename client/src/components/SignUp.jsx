@@ -15,14 +15,15 @@ function SignUp({setIsAuth}) {
     const signUp = () => {
         Axios.post("http://localhost:3001/signup", user).then(res => {
             const {token, userId, firstName, lastName, email, username, hashedPassword} = res.data;
-            cookies.set("token", token);
-            cookies.set("userId", userId);
-            cookies.set("firstName", firstName);
-            cookies.set("lastName", lastName);
-            cookies.set("email", email);
-            cookies.set("username", username);
-            cookies.set("hashedPassword", hashedPassword);
-            setIsAuth(true)
+            const options = {path: '/'};
+            cookies.set("token", token, options);
+            cookies.set("userId", userId, options);
+            cookies.set("firstName", firstName, options);
+            cookies.set("lastName", lastName, options);
+            cookies.set("email", email, options);
+            cookies.set("username", username, options);
+            cookies.set("hashedPassword", hashedPassword, options);
+            setIsAuth(true);
         })
         // }).then(() => {
         //     console.log("Signup successful");
