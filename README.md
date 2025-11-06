@@ -1,9 +1,9 @@
-## Real-Time Multiplayer Tic-Tac-Toe
+# Real-Time Multiplayer Tic-Tac-Toe
 A small mulitplayer real-time tic-tac-toe game built with **React** and **Stream Chat**.  
 It allows two players to play live against each other while chatting in the same interface.  
 
 ### Authentication Screens
-![Login Screen](./assets/screenshots/login-screen.png) ![SignUp Screen](./assets/screenshots/sign-up-screen.png)
+|![Login Screen](./assets/screenshots/login-screen.png)|![SignUp Screen](./assets/screenshots/sign-up-screen.png)|
 
 ### Waiting Screen
 ![Waiting Screen](./assets/screenshots/waiting-screen.png)
